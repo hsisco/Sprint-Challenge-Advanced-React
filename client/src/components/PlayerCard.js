@@ -1,10 +1,9 @@
 import React from 'react';
-import { CardDeck, Card, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText } from 'reactstrap';
 
 export const PlayerCard = (props) => {
   return(
     <div className="🏃🏻‍♀️">
-      <CardDeck>
         <Card>
           <CardBody>
             <CardTitle>{props.name}</CardTitle>
@@ -14,7 +13,6 @@ export const PlayerCard = (props) => {
             </CardText>
           </CardBody>
         </Card>
-      </CardDeck>
     </div>
   );
 }

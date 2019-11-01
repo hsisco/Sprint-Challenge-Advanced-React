@@ -1,21 +1,19 @@
 import React from 'react';
 import { PlayerCard } from './PlayerCard';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
-export class PlayersPage extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      players: data
-    }
-  }
-  render(){
-    return (
-      <div className="players">
-        {this.state.players.map(soccerLady => (
-          <PlayerCard key={soccerLady.name} soccerLady={soccerLady.name} />
-        ))}
-      </div>
-    );
-  }
+export const PlayersPage = (key, initialValue) => {
+  const [players] = useLocalStorage(key, initialValue);
+  return (
+    <div className="soccerLadies">
+      {players.map(soccerLady => (
+        <PlayerCard
+          key={soccerLady.name}
+          soccerLady={soccerLady}
+          country={soccerLady.country}
+          searches={soccerLady.searches} />
+      ))}
+    </div>
+  );
+}
 
-};

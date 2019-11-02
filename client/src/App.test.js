@@ -1,18 +1,21 @@
-
 import React from 'react';
-import { render } from '@testing-library/react';
+import * as rtl from 'react-testing-library';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
+afterEach(rtl.cleanup);
+
 it('renders without crashing', () => {
-  render(<App />);
+  rtl.render(<App />);
 });
 
-test('Card is found', () => {
-  const { getByTestId } = render(<App />);
-  getByTestId(/⚽️/i);
+it('renders "World Cup" text', () => {
+  const wrapper = rtl.render(<App />);
+  expect(wrapper.getByText(/world cup/i));
 });
 
-test('Heading Text is found', () => {
-  const { getByTestId } = render(<App />);
-  getByTestId(/Heading-Text/i);
+it('no "Men" in text', () => {
+  const wrapper = rtl.render(<App />);
+  const noMen = wrapper.queryByText(/men/i);
+  expect(noMen).not.toBeInTheDocument();
 });

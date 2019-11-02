@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle, CardText } from 'reactstrap';
 export const PlayerCard = (props) => {
   return(
     <div className="🏃🏻‍♀️">
-        <Card data-testid="⚽️">
+        <Card>
           <CardBody>
             <CardTitle>{props.name}</CardTitle>
             <CardText>{props.country}</CardText>

@@ -22,7 +22,6 @@ export function SetFavPlayer() {
             name="search"
             value={favPlayer}
             onChange={handleFavPlayer} />
-            <Button onClick="submit">Declare it!</Button>
         </InputGroup>
       </form>
       <div className="favPlayer">

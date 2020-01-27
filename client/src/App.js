@@ -10,7 +10,6 @@ function App() {
       <Jumbotron fluid>
         <Container fluid>
           <h1>Women's World Cup</h1>
-          <DarkToggle />
         </Container>
         <h3>Players Ranked by Google Trends Searches</h3>
       </Jumbotron>

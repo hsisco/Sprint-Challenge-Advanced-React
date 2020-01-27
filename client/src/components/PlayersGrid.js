@@ -30,11 +30,7 @@ export class PlayersGrid extends React.Component {
       <div className="soccerLadies">
         <CardDeck>
           {this.state.players.map((soccerLady) => (
-            <PlayerCard
-              key={soccerLady.id}
-              name={soccerLady.name}
-              country={soccerLady.country}
-              searches={soccerLady.searches} />
+            <PlayerCard key={soccerLady.id} {...soccerLady} />
           ))}
         </CardDeck>
       </div>

@@ -7,5 +7,5 @@ export const useInput = (key, initialValue) => {
     setValue(e.target.value);
   };
 
-  return [value, handleChanges, setValue];
+  return [value, setValue, handleChanges];
 };

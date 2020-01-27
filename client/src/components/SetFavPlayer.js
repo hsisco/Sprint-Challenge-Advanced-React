@@ -3,7 +3,7 @@ import { useInput } from '../hooks/useInput';
 import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
 
 export function SetFavPlayer() {
-  const [favPlayer, handleFavPlayer, setFavPlayer] = useInput('favPlayer', '');
+  const [favPlayer, setFavPlayer, handleFavPlayer] = useInput('');
 
   const handleSubmit = e => {
     e.preventDefault();

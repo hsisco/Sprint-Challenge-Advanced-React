@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInput } from '../hooks/useInput';
-import { InputGroup, InputGroupText, InputGroupAddon, Input, Button } from 'reactstrap';
+import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
 
 export function SetFavPlayer() {
   const [favPlayer, handleFavPlayer, setFavPlayer] = useInput('favPlayer', '');

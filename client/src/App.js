@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Jumbotron, Container } from 'reactstrap';
 import { PlayersGrid } from './components/PlayersGrid';
+import { Search } from './components/Search';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         </Container>
         <h3>Players Ranked by Google Trends Searches</h3>
       </Jumbotron>
+      <Search />
       <PlayersGrid />
     </div>
   );
